@@ -1,0 +1,59 @@
+<div class="accepted-orders" style=" padding: 96px 16px 16px 16px;height: fit-content;">
+    <div class="accepted-orders-list" style="background-color:white;">
+        <div class="list-header" style="background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f7f9), color-stop(100%, #ebedf0)); text-align:center;">
+            Shop List
+        </div>
+        <div class="content" style="border-bottom:1px solid #D5D5D5;" *ngFor="let user of dataForShow;let ind=index;">
+            <div class="ui-grid ui-grid-responsive ui-fluid" style="font-size:16px;padding:20px;">
+                <div class="bg" [ngStyle]="{'background-image':user.bgUrl}">
+
+                </div>
+                <div class="delete">
+                    <md-icon (click)="deleteItem(user)">delete_forever</md-icon>
+                </div>
+                <div class="edit">
+                    <md-icon (click)="showDialog()">mode_edit</md-icon>
+                </div>
+
+                <p-dialog [(visible)]="display" [width]="900">
+                    <div style=" overflow: scroll;">
+
+                        <div class="ui-g container">
+
+                            <div class="ui-g-12 ui-md-6 ui-lg-4 left">
+
+                            </div>
+                            <div class="ui-g-12 ui-md-6 ui-lg-6 middle">
+                                <div class="description" *ngFor="let item of description">
+                                    <p>Product id is:{{item.productId}}</p>
+                                    <p>Product price is:{{item.price}}</p>
+                                    <p>Discount is:{{item.discount}}</p>
+                                </div>
+                            </div>
+                            <div class="ui-g-12 ui-md-6 ui-lg-2 right">
+                                <h2>3 Example</h2>
+                            </div>
+
+                        </div>
+                        <div class="statusBar">
+
+                        </div>
+                        <p-fileUpload name="demo[]" url="./upload.php" (onSelect)="onUpload($event)" accept="image/*" maxFileSize="1000000">
+                            <ng-template pTemplate type="content">
+                                <ul *ngIf="uploadedFiles.length">
+                                    <li *ngFor="let file of uploadedFiles">
+                                        <div style="width:100px; height:100px" [ngStyle]="{'background-image':'file.objectURL.changingThisBreaksApplicationSecurity'}">
+
+                                        </div>
+                                    </li>
+                                </ul>
+                            </ng-template>
+                        </p-fileUpload>
+                    </div>
+
+                </p-dialog>
+
+            </div>
+        </div>
+    </div>
+</div>

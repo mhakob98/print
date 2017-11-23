@@ -1,0 +1,10 @@
+<ngx-carousel [inputs]="carouselBanner" [moveToSlide]="1" (onMove)="onmoveFn($event)">
+
+    <ngx-item NgxCarouselItem class="bannerStyle" *ngFor="let item of styles">
+        <div class="imageProp" [ngStyle]="{'background-image':item.background}">
+        </div>
+    </ngx-item>
+
+    <button NgxCarouselPrev class='leftRs'>&lt;</button>
+    <button NgxCarouselNext class='rightRs'>&gt;</button>
+</ngx-carousel>

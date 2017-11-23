@@ -1,0 +1,37 @@
+.allContent {
+    max-width: 90%;
+    width: 95%;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 40px;
+    .leftPanel {
+        float: left;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        position: relative;
+        .container {
+            position: absolute;
+            top: 25%;
+            left: 0px;
+            width: fit-content;
+            height: fit-content;
+        }
+    }
+    .MapContainer {
+        float: right;
+        height: 100%;
+        width: 50%;
+        display: flex;
+        .Map {
+            margin: auto;
+            width: 95%;
+            height: 90%;
+            background: white;
+        }
+    }
+}
+
+.agm-map {
+    height: 300px;
+}

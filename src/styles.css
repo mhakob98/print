@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body {
+    line-height: 1.5em;
+    margin: 0;
+    background: white;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.topbarRight .mat-input-wrapper.mat-form-field-wrapper label {
+    color: white;
+}
+
+.topbarRight .mat-form-field-underline {
+    background-color: white;
+}
+
+.topbarRight .mat-form-field-ripple {
+    background-color: white;
+}
+
+body .ui-widget-header {
+    background: #3F51B5;
+    font-size: 1em;
+    color: white;
+    border: 1px solid #3F51B5;
+}
+
+body .ui-datatable .ui-datatable-header,
+body .ui-datatable .ui-datatable-footer {
+    padding: 0.625em 1em;
+}
+
+body .ui-datatable .ui-datatable-thead>tr th {
+    padding: .625em .875em;
+    background-color: #ffffff;
+}

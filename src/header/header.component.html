@@ -1,0 +1,20 @@
+<div class="ui-g">
+    <div class="ui-g-12 highPanel">
+        <div class="iconka">
+            <md-icon starLeft class="star">stars</md-icon>
+        </div>
+        <div class="buttonsContainer" *ngIf="checkResize">
+            <div class="buttonContent">
+                <span routerLink="#" routerLinkActive="active"> Contacts </span>
+                <span routerLink="#"> Login </span>
+                <span routerLink="/registration"> Registration </span>
+                <span routerLink="#"> Contact Us </span>
+                <span routerLink="#"> Shop </span>
+            </div>
+        </div>
+        <div class="buttonContainer dropMenu" *ngIf="!checkResize">
+            <md-icon>view_headline</md-icon>
+        </div>
+
+    </div>
+</div>

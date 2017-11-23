@@ -1,0 +1,14 @@
+<div class="Container">
+    <div class="ui-g">
+        <div class="ui-g-12 ui-md-6 ui-lg-4" *ngFor="let item of information">
+            <div class="card">
+                <div class="bg" [ngStyle]="{'background-image':item.bgUrl}">
+
+                </div>
+                <div class="contentType">
+                    <p>{{item.label}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

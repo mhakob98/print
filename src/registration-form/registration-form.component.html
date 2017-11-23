@@ -1,0 +1,48 @@
+<div class="SignIn">
+    <div class="content">
+        <div class="caption">
+            <div class="text">
+                <span>Join Today</span>
+            </div>
+            <div class="lock">
+                <md-icon>https</md-icon>
+            </div>
+        </div>
+        <div class="underCaption">
+            <span>Choose one of the following sign up methods</span>
+        </div>
+
+        <div class="SocialButtons">
+            <div class="Twitter">
+                <button class="btn azm-social azm-btn azm-border-bottom azm-twitter"><i class="fa fa-twitter"></i>Twwiter</button>
+            </div>
+            <div class="Fb">
+                <button (click)="signIn('facebook')" class="btn azm-social azm-btn azm-border-bottom azm-facebook"><i class="fa fa-facebook"></i>Facebook</button>
+            </div>
+            <div class="Google">
+                <button (click)="signIn('google')" class=" btn azm-social azm-btn azm-border-bottom azm-google-plus "><i class="fa fa-google-plus "></i>Google</button>
+            </div>
+        </div>
+        <div class="InputCaption ">
+            <span>Or sign up  using your email adress</span>
+        </div>
+        <div class="InputGroup ">
+            <form class="example-form " style="width:400px;margin:0 auto;float:left; ">
+                <md-form-field class="example-full-width ">
+                    <input mdInput placeholder="Email " type="email " #email>
+                </md-form-field>
+                <md-form-field class="example-full-width ">
+                    <input mdInput placeholder="Password " type="password " #password>
+                </md-form-field>
+                <md-form-field class="example-full-width ">
+                    <input mdInput placeholder="Confirm Password " type="password " #confirmPassword>
+                </md-form-field>
+
+            </form>
+        </div>
+        <div class="SubmitButton ">
+            <button (click)="Validation(email.value,password.value,confirmPassword.value) " class="buttonSub ">Success Button</button>
+        </div>
+    </div>
+
+</div>

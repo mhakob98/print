@@ -1,0 +1,24 @@
+<div class="ui-g">
+    <div class="ui-g-12 ui-md-2 menu">
+        <div class="ui-g" *ngFor="let item of information;let ind=index;" (click)="getIndex(ind)">
+            <div class="ui-g-12">
+                <div class="card">
+                    <div class="bg" [ngStyle]="{'background-image':item.bgUrl}">
+
+                    </div>
+                    <div class="text">
+                        <p>{{item.label}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui-g-12 ui-md-10 ui-g-nopad">
+        <div class="ui-g-12 header">
+            <span>1200<br> Dollars</span>
+        </div>
+        <shop-card [tempData]="dataForShow"></shop-card>
+
+    </div>
+
+</div>
